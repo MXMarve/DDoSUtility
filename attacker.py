@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     for _ in range(count):
         try:
-            print("Socket {}".format(_))
+            print(Fore.YELLOW+"Connecting Sockets {}".format(_))
             sock = setupSocket(ip)
         except socket.error:
             break
@@ -48,10 +48,10 @@ if __name__ == "__main__":
                 sockets.remove(sock)
 
         for _ in range(count - len(sockets)):
-            print(Fore.YELLOW+"HIT!"+Fore.WHITE)
             try:
                 sock = setupSocket(ip)
                 if sock:
+                    print(Fore.YELLOW+"HIT!"+Fore.WHITE)
                     sockets.append(sock)
             except socket.error:
                 break

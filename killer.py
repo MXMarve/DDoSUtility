@@ -35,14 +35,26 @@ logo = """
 
 print(Fore.RED + logo + Fore.BLUE)
 
-ip = input("  URL: ")
+ip = input(Fore.CYAN+"  URL: "+Fore.WHITE)
 
-count = input("  Multiplier(1-50): ")
+count = input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE)
 
 def attack():
   print("  Starting Thread!")
   os.system("python3.9 attacker.py "+ip)
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
+
+yesno = input(Fore.RED+"Start Attack On "+ip+"with "+count+"x Multiplier"+"? Y/N: ")
+
+if yesno == "n":
+  print(Fore.BLUE+"Exiting...")
+  time.sleep(2)
+  exit()
+
+if yesno == "N":
+  print(Fore.BLUE+"Exiting...")
+  time.sleep(2)
+  exit()
 
 if __name__ == "__main__":
   t1 = threading.Thread(target=attack)
