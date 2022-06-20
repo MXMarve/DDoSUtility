@@ -44,16 +44,18 @@ def attack():
   os.system("python3.9 attacker.py "+ip)
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
-yesno = input(Fore.RED+"Start Attack On "+ip+"with "+count+"x Multiplier"+"? Y/N: ")
+yesno = input(Fore.RED+"  Start Attack On "+ip+" With "+count+"x Multiplier"+"? Y/N: ")
 
 if yesno == "n":
-  print(Fore.BLUE+"Exiting...")
+  print(Fore.BLUE+"  Exiting...")
   time.sleep(2)
+  os.system("clear")
   exit()
 
 if yesno == "N":
-  print(Fore.BLUE+"Exiting...")
+  print(Fore.BLUE+"  Exiting...")
   time.sleep(2)
+  os.system("clear")
   exit()
 
 if __name__ == "__main__":
