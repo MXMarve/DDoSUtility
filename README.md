@@ -17,7 +17,7 @@ To Run:
   3 times, multiplying the strength by 3) You can go from
   1-50x strength
   
-  &4ONLY FOR EDUCATIONAL PURPOSES ONLY
+  ONLY FOR EDUCATIONAL PURPOSES ONLY
   
   BY USING THIS PROGRAM YOU AGREE THAT
   I AM NOT HELD LIABLE FOR ANYTHING YOU
