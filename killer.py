@@ -1,4 +1,20 @@
-import os, time, pyautogui, threading
+import os
+try:
+  import time
+except:
+  print("Installing Dependency: Time")
+  os.system("pip3 install time")
+try:
+  import pyautogui
+except:
+  print("Installing Dependency: Pyautogui")
+  os.system("pip3 install pyautogui")
+try:
+  import time
+except:
+  print("Installing Dependency: Threading")
+  os.system("pip3 install Threading")
+import threading, time, pyautogui
 ip = input("URL: ")
 count = input("How hard to hit: 1-50 (Only go more than 3 if your computer supports it): ")
 def attack():
