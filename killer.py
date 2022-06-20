@@ -1,21 +1,49 @@
 import os
+
+try:
+  import Colorama
+except:
+  print("Installing Dependency: Colorama")
+  os.system("pip3.9 install colorama")
+
 try:
   import time
 except:
   print("Installing Dependency: Time")
   os.system("pip3.9 install time")
+
 try:
   import time
 except:
   print("Installing Dependency: Threading")
   os.system("pip3.9 install Threading")
+
 import threading
 import time
-ip = input("URL: ")
-count = input("How hard to hit: 1-50 (Only go more than 3 if your computer supports it): ")
+import colorama
+from colorama import Fore
+os.system("clear")
+logo = """
+  ███╗   ███╗ █████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗
+  ████╗ ████║██╔══██╗██╔══██╗██║   ██║██║████╗  ██║
+  ██╔████╔██║███████║██████╔╝██║   ██║██║██╔██╗ ██║
+  ██║╚██╔╝██║██╔══██║██╔══██╗╚██╗ ██╔╝██║██║╚██╗██║
+  ██║ ╚═╝ ██║██║  ██║██║  ██║ ╚████╔╝ ██║██║ ╚████║
+  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝
+  DDoS v2                                               
+"""
+
+print(Fore.RED + logo + Fore.BLUE)
+
+ip = input("  URL: ")
+
+count = input("  Multiplier(1-50): ")
+
 def attack():
-  print("Starting Thread!")
+  print("  Starting Thread!")
   os.system("python3.9 attacker.py "+ip)
+  print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
+
 if __name__ == "__main__":
   t1 = threading.Thread(target=attack)
   t2 = threading.Thread(target=attack)

