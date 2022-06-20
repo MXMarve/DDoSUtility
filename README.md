@@ -2,6 +2,7 @@
 Hits hard as fuck &lt;3
 
 Install:
+
   sudo apt remove python3 python3-pip
   
   sudo apt install python3.9
